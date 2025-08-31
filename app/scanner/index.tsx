@@ -16,7 +16,7 @@ import axios from 'axios';
 
 interface QR {
     B: number;
-    secret: 'фичабилет';
+    secret: 'букетик';
 }
 
 const URL =
@@ -113,7 +113,7 @@ export default function Home() {
                             if (data && !qrLock.current) {
                                 qrLock.current = true;
                                 const qrDataObj: QR = JSON.parse(data);
-                                if (qrDataObj.secret === 'фичабилет') {
+                                if (qrDataObj.secret === 'букетик') {
                                     setOpenModalAboutTicket(true);
                                     await axios
                                         .post(URL, null, {
